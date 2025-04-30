@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,22 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// PCOS Buddy custom colors
+				lavender: {
+					light: '#E2D4F0',
+					DEFAULT: '#C9B6E4',
+					dark: '#9F8AC1'
+				},
+				pink: {
+					light: '#F8D7DB',
+					DEFAULT: '#F0B6C2',
+					dark: '#E79CAC'
+				},
+				blue: {
+					light: '#D8EAF6',
+					DEFAULT: '#B8DDED',
+					dark: '#8CBED8'
 				}
 			},
 			borderRadius: {
@@ -84,11 +101,20 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-slow': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.7' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-slow': 'pulse-slow 3s ease-in-out infinite'
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				display: ['Quicksand', 'sans-serif']
 			}
 		}
 	},
