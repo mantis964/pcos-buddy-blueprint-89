@@ -12,9 +12,9 @@ const Header: React.FC = () => {
       <div className="pcos-container flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <div className="bg-lavender h-8 w-8 rounded-full flex items-center justify-center">
-            <span className="font-display font-bold text-white">P</span>
+            <span className="font-display font-bold text-white">E</span>
           </div>
-          <span className="font-display font-bold text-xl text-lavender-dark">PCOS Buddy</span>
+          <span className="font-display font-bold text-xl text-lavender-dark">Ecolve Technologies</span>
         </Link>
 
         {/* Mobile menu button */}
@@ -28,6 +28,9 @@ const Header: React.FC = () => {
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center gap-6">
           <Link to="/approach" className="text-foreground hover:text-lavender-dark transition-colors">
+            PCOS Buddy
+          </Link>
+          <Link to="#" className="text-foreground hover:text-lavender-dark transition-colors">
             About
           </Link>
           <Button variant="outline" asChild>
@@ -44,6 +47,13 @@ const Header: React.FC = () => {
             <div className="pcos-container py-4 flex flex-col gap-4">
               <Link 
                 to="/approach" 
+                className="text-foreground hover:text-lavender-dark transition-colors py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                PCOS Buddy
+              </Link>
+              <Link 
+                to="#" 
                 className="text-foreground hover:text-lavender-dark transition-colors py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
