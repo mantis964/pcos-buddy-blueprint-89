@@ -1,3 +1,4 @@
+
 import * as React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, Clock, Users } from "lucide-react";
@@ -5,11 +6,22 @@ import PageContainer from "@/components/PageContainer";
 import { Button } from "@/components/ui/button";
 import IconCard from "@/components/IconCard";
 import { Input } from "@/components/ui/input";
+import { toast } from "@/components/ui/use-toast";
 
 const LandingPage: React.FC = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle newsletter signup logic
+    const form = e.target as HTMLFormElement;
+    const email = new FormData(form).get('email') as string;
+    
+    if (email) {
+      toast({
+        title: "Success!",
+        description: "You've been added to our newsletter.",
+      });
+      form.reset();
+    }
   };
 
   return (
@@ -44,7 +56,7 @@ const LandingPage: React.FC = () => {
             <div className="aspect-square max-w-md mx-auto bg-lavender/20 rounded-full overflow-hidden">
               <div className="absolute inset-0 flex items-center justify-center">
                 <img
-                  src="./hero_image.jpeg"
+                  src="/hero_image.jpeg"
                   alt="Women's Health Solutions"
                   className="w-full h-full object-cover"
                 />
@@ -54,7 +66,7 @@ const LandingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* About OtoVee */}
+      {/* About Ecolve */}
       <section className="py-12 bg-blue/10">
         <div className="pcos-container">
           <div className="text-center max-w-3xl mx-auto mb-10">
@@ -215,6 +227,7 @@ const LandingPage: React.FC = () => {
             >
               <Input
                 type="email"
+                name="email"
                 placeholder="Your email"
                 className="flex-grow"
                 required
