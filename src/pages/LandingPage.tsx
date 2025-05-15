@@ -44,7 +44,7 @@ const LandingPage: React.FC = () => {
             <div className="aspect-square max-w-md mx-auto bg-lavender/20 rounded-full overflow-hidden">
               <div className="absolute inset-0 flex items-center justify-center">
                 <img
-                  src="/hero_image.jpeg"
+                  src="./hero_image.jpeg"
                   alt="Women's Health Solutions"
                   className="w-full h-full object-cover"
                 />
@@ -59,10 +59,10 @@ const LandingPage: React.FC = () => {
         <div className="pcos-container">
           <div className="text-center max-w-3xl mx-auto mb-10">
             <h2 className="text-2xl md:text-3xl font-display font-semibold mb-6 text-blue-dark">
-              About OtoVee
+              About Ecolve
             </h2>
             <p className="text-lg text-muted-foreground">
-              OtoVee is a women-focused wellness tech company redefining how
+              Ecolve is a women-focused wellness tech company redefining how
               chronic conditions like PCOS are understood, tracked, and treated.
               We use smart technology, real-world insights, and holistic care
               models to build tools that actually work.
